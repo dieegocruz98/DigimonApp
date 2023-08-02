@@ -10,8 +10,8 @@ import SwiftUI
 
 final class LoginViewModel: ObservableObject {
     
-    private var realUser: String = "diegocruzz"
-    private var realPassword: String = "keepc0ding@"
+    private var realUser: String = "dzz"
+    private var realPassword: String = "keep"
     
     func login(user: String?, password: String?, completion: (Bool) -> ()) {
         

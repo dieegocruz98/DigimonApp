@@ -137,6 +137,7 @@
 		562C68202A79034800621A96 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				56C05BEF2A7A6A0900A349ED /* Root */,
 				562C68212A79035800621A96 /* Login */,
 			);
 			path = Presentation;
@@ -149,6 +150,13 @@
 				562C68292A79326D00621A96 /* LoginViewModel.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		56C05BEF2A7A6A0900A349ED /* Root */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Root;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

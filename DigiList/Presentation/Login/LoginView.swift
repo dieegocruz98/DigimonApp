@@ -18,12 +18,22 @@ struct LoginView: View {
     var body: some View {
         ZStack{
             
+            
             Image(decorative: "LoginBackground")
                 .resizable()
                 .ignoresSafeArea()
             
             // MARK: - User, password login button
             VStack {
+                
+                Text("DigiList").font(.system(size: 60))
+                    .fontWeight(.black)
+                    .foregroundStyle(LinearGradient(
+                        colors: [.blue, .green, .blue],
+                        startPoint: .topLeading,
+                        endPoint: .bottomTrailing))
+                
+                Spacer()
                 
                 // MARK: - User, password
                 VStack {
@@ -47,7 +57,7 @@ struct LoginView: View {
                 }
                 .frame(width: 272, height: 112)
                 
-                Spacer()
+                Spacer().frame(height: 25)
                 
                 // MARK: - Login button
                 Button {
