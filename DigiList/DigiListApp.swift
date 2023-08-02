@@ -13,6 +13,7 @@ struct DigiListApp: App {
         WindowGroup {
             //ContentView()
             LoginView()
+                .environmentObject(LoginViewModel())
         }
     }
 }

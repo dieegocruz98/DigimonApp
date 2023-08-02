@@ -9,9 +9,10 @@ import SwiftUI
 
 struct LoginView: View {
     
+    @EnvironmentObject var loginViewModel: LoginViewModel
     @State private var user = ""
     @State private var password = ""
-    @State private var showPopup = false
+    @State var showPopup = false
     
     
     var body: some View {
@@ -50,8 +51,13 @@ struct LoginView: View {
                 
                 // MARK: - Login button
                 Button {
-                    self.showPopup = true
-                    //rootViewModel.onLogin(user: "bejl@keepcoding.es", password: "123456")
+                    //loginViewModel.login(user: user, password: password)
+                    //self.showPopup = true
+                    loginViewModel.login(user: user, password: password){ boolean in
+                        showPopup = boolean
+                        user = ""
+                        password = ""
+                    }
                 } label: {
                     Text("Login")
                         .font(.title3)

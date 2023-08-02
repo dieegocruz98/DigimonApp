@@ -16,6 +16,7 @@
 		562C68142A79030500621A96 /* DigiListUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562C68132A79030500621A96 /* DigiListUITestsLaunchTests.swift */; };
 		562C68252A79039100621A96 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562C68242A79039100621A96 /* LoginView.swift */; };
 		562C68282A7927A500621A96 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 562C68272A7927A500621A96 /* Lottie */; };
+		562C682A2A79326D00621A96 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562C68292A79326D00621A96 /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		562C68112A79030500621A96 /* DigiListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigiListUITests.swift; sourceTree = "<group>"; };
 		562C68132A79030500621A96 /* DigiListUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigiListUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		562C68242A79039100621A96 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		562C68292A79326D00621A96 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				562C68242A79039100621A96 /* LoginView.swift */,
+				562C68292A79326D00621A96 /* LoginViewModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				562C682A2A79326D00621A96 /* LoginViewModel.swift in Sources */,
 				562C68252A79039100621A96 /* LoginView.swift in Sources */,
 				562C67F92A79030400621A96 /* ContentView.swift in Sources */,
 				562C67F72A79030400621A96 /* DigiListApp.swift in Sources */,
