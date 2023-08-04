@@ -7,6 +7,28 @@
 
 import SwiftUI
 
+extension TextField {
+    func textFieldModifier() -> some View {
+        self
+            .padding(10)
+            .background(.white)
+            .multilineTextAlignment(.center)
+            .foregroundColor(.black)
+            .cornerRadius(10)
+    }
+}
+
+extension SecureField {
+    func secureFieldModifier() -> some View {
+        self
+            .padding(10)
+            .background(.white)
+            .multilineTextAlignment(.center)
+            .foregroundColor(.black)
+            .cornerRadius(10)
+    }
+}
+
 struct LoginView: View {
     
     @EnvironmentObject var loginViewModel: LoginViewModel
@@ -38,21 +60,13 @@ struct LoginView: View {
                 // MARK: - User, password
                 VStack {
                     TextField("User mail", text: $user)
-                        .padding(10)
-                        .background(.white)
-                        .multilineTextAlignment(.center)
-                        .foregroundColor(.black)
-                        .cornerRadius(10)
+                        .textFieldModifier()
                         .keyboardType(.emailAddress)
                     
                     Spacer()
                         
                     SecureField("Password", text: $password)
-                        .padding(10)
-                        .background(.white)
-                        .multilineTextAlignment(.center)
-                        .foregroundColor(.black)
-                        .cornerRadius(10)
+                        .secureFieldModifier()
                     
                 }
                 .frame(width: 272, height: 112)
