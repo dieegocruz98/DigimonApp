@@ -12,8 +12,9 @@ struct DigiListApp: App {
     var body: some Scene {
         WindowGroup {
             //ContentView()
-            LoginView()
-                .environmentObject(LoginViewModel())
+            HomeView(homeViewModel: HomeViewModel(repository: RepositoryImpl(remoteDataSource: RemoteDataSource())))
+            //LoginView()
+              //  .environmentObject(LoginViewModel())
         }
     }
 }

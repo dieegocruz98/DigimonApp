@@ -11,13 +11,16 @@ struct DigimonCellView: View {
     
     var digimon: Digimon
     
+    init(digimon: Digimon) {
+        self.digimon = digimon
+    }
+    
     var body: some View {
         VStack(alignment: .leading, content: { // Para alinear al inicio
             HStack(content: {
-                Spacer(minLength: 20)
                 // Para el row
                 // Imagen
-                AsyncImage(url: digimon.img,
+                AsyncImage(url: URL(string: digimon.img),
                            content: { image in
                                image.resizable()
                         .aspectRatio(contentMode: .fill)
@@ -48,6 +51,6 @@ struct DigimonCellView: View {
 
 struct DigimonCellView_Previews: PreviewProvider {
     static var previews: some View {
-        DigimonCellView(digimon: Digimon(id: "id", name: "Koromon", img: URL(string: "https://digimon.shadowsmith.com/img/koromon.jpg")!, level: "In Training"))
+        DigimonCellView(digimon: Digimon(id: 0, name: "Koromon", img: "https://digimon.shadowsmith.com/img/koromon.jpg", level: "In training"))
     }
 }

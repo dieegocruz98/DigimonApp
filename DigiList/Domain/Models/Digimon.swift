@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct Digimon: Decodable, Identifiable {
-    var id: String
+struct Digimon: Codable, Identifiable {
+    var id: Int?
     let name: String
-    let img: URL
+    let img: String
     let level: String
 }
