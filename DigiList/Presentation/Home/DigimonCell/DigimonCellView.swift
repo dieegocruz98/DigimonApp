@@ -24,7 +24,7 @@ struct DigimonCellView: View {
                            content: { image in
                                image.resizable()
                         .aspectRatio(contentMode: .fill)
-                                    .frame(width: 130, height: 73)
+                                    .frame(width: 130, height: 130)
                            },
                            placeholder: {
                                ProgressView()
