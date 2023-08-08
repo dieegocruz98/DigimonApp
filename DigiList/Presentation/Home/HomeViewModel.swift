@@ -19,7 +19,7 @@ final class HomeViewModel: ObservableObject {
         self.repository = repository
         DispatchQueue.main.async {
             Task(priority: .medium){
-                guard var digimonsFromApi = try? await repository.getDigimons() else {
+                guard let digimonsFromApi = try? await repository.getDigimons() else {
                     self.digimons = []
                     print("No se ha podido obtener los digimons del repositorio")
                     return
