@@ -31,6 +31,7 @@ extension SecureField {
 
 struct LoginView: View {
     
+    @EnvironmentObject var rootViewModel: RootViewModel
     @EnvironmentObject var loginViewModel: LoginViewModel
     @State private var user = ""
     @State private var password = ""
@@ -38,71 +39,76 @@ struct LoginView: View {
     
     
     var body: some View {
-        ZStack{
-            
-            
-            Image(decorative: "LoginBackground")
-                .resizable()
-                .ignoresSafeArea()
-            
-            // MARK: - User, password login button
-            VStack {
+        NavigationView{
+            ZStack{
                 
-                Text("DigiList").font(.system(size: 60))
-                    .fontWeight(.black)
-                    .foregroundStyle(LinearGradient(
-                        colors: [.blue, .green, .blue],
-                        startPoint: .topLeading,
-                        endPoint: .bottomTrailing))
                 
-                Spacer()
+                Image(decorative: "LoginBackground")
+                    .resizable()
+                    .ignoresSafeArea()
                 
-                // MARK: - User, password
+                // MARK: - User, password login button
                 VStack {
-                    TextField("User mail", text: $user)
-                        .textFieldModifier()
-                        .keyboardType(.emailAddress)
+                    
+                    Text("DigiList").font(.system(size: 60))
+                        .fontWeight(.black)
+                        .foregroundStyle(LinearGradient(
+                            colors: [.blue, .green, .blue],
+                            startPoint: .topLeading,
+                            endPoint: .bottomTrailing))
                     
                     Spacer()
-                        
-                    SecureField("Password", text: $password)
-                        .secureFieldModifier()
                     
-                }
-                .frame(width: 272, height: 112)
-                
-                Spacer().frame(height: 25)
-                
-                // MARK: - Login button
-                Button {
-                    //loginViewModel.login(user: user, password: password)
-                    //self.showPopup = true
-                    loginViewModel.login(user: user, password: password){ boolean in
-                        showPopup = boolean
-                        user = ""
-                        password = ""
+                    // MARK: - User, password
+                    VStack {
+                        TextField("User mail", text: $user)
+                            .textFieldModifier()
+                            .keyboardType(.emailAddress)
+                        
+                        Spacer()
+                        
+                        SecureField("Password", text: $password)
+                            .secureFieldModifier()
+                        
                     }
-                } label: {
-                    Text("Login")
-                        .font(.title3)
-                        .fontWeight(.semibold)
-                        .foregroundStyle(.white)
-                        .padding()
-                        .frame(width: 138, height: 40)
-                        .background(Color(uiColor: UIColor(red: 128/255, green: 128/255, blue: 128/255, alpha: 1)))
-                        .cornerRadius(8.0)
-                        .shadow(radius: 10, x: 20, y: 10)
+                    .frame(width: 272, height: 112)
+                    
+                    Spacer().frame(height: 25)
+                    
+                    // MARK: - Login button
+                    Button {
+                        //loginViewModel.login(user: user, password: password)
+                        //self.showPopup = true
+                        loginViewModel.login(user: user, password: password){ boolean in
+                            showPopup = boolean
+                            user = ""
+                            password = ""
+                            if( !boolean){
+                                rootViewModel.onLogin()
+                            }
+                        }
+                    } label: {
+                        Text("Login")
+                            .font(.title3)
+                            .fontWeight(.semibold)
+                            .foregroundStyle(.white)
+                            .padding()
+                            .frame(width: 138, height: 40)
+                            .background(Color(uiColor: UIColor(red: 128/255, green: 128/255, blue: 128/255, alpha: 1)))
+                            .cornerRadius(8.0)
+                            .shadow(radius: 10, x: 20, y: 10)
+                    }
+                    .alert(isPresented: $showPopup) {
+                        Alert(
+                            title: Text("Incorrect Username or Password"),
+                            message: Text("Try again!😳"),
+                            dismissButton: .default(Text("OK"))
+                        )
+                    }
                 }
-                .alert(isPresented: $showPopup) {
-                    Alert(
-                        title: Text("Incorrect Username or Password"),
-                        message: Text("Try again!😳"),
-                        dismissButton: .default(Text("OK"))
-                    )
-                }
+                .frame(width: 272, height: 216)
+                
             }
-            .frame(width: 272, height: 216)
-            
         }
     }
 }

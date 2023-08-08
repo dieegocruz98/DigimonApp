@@ -16,13 +16,16 @@ struct HomeView: View {
     }
     
     var body: some View {
-        
-        List{
-            ForEach(homeViewModel.digimons) {digimon in
-                DigimonCellView(digimon: digimon)
+        NavigationStack{
+            List{
+                ForEach(homeViewModel.digimons) {digimon in
+                    DigimonCellView(digimon: digimon)
+                }
             }
+            .navigationTitle("Digimon's")
         }
     }
+    
 }
 
 struct HomeView_Previews: PreviewProvider {

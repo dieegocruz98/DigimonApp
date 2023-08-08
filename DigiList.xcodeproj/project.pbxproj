@@ -25,6 +25,10 @@
 		567A51BC2A7BCB72005A40C1 /* DigimonCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567A51BB2A7BCB72005A40C1 /* DigimonCellView.swift */; };
 		56D588112A80CBB5008BDB5E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D588102A80CBB5008BDB5E /* HomeViewModel.swift */; };
 		56D588142A80CEE4008BDB5E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D588132A80CEE4008BDB5E /* HomeView.swift */; };
+		56D6FF492A8215BE002736CB /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D6FF482A8215BE002736CB /* RootView.swift */; };
+		56D6FF4B2A8215C9002736CB /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D6FF4A2A8215C9002736CB /* RootViewModel.swift */; };
+		56D6FF4E2A821E6C002736CB /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D6FF4D2A821E6C002736CB /* SettingsView.swift */; };
+		56D6FF512A82338E002736CB /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D6FF502A82338E002736CB /* SettingsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +69,10 @@
 		567A51BB2A7BCB72005A40C1 /* DigimonCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigimonCellView.swift; sourceTree = "<group>"; };
 		56D588102A80CBB5008BDB5E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		56D588132A80CEE4008BDB5E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		56D6FF482A8215BE002736CB /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		56D6FF4A2A8215C9002736CB /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
+		56D6FF4D2A821E6C002736CB /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		56D6FF502A82338E002736CB /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +163,7 @@
 		562C68202A79034800621A96 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				56D6FF4C2A821E5C002736CB /* Settings */,
 				567A51B72A7BCB2C005A40C1 /* Home */,
 				56C05BEF2A7A6A0900A349ED /* Root */,
 				562C68212A79035800621A96 /* Login */,
@@ -235,8 +244,19 @@
 		56C05BEF2A7A6A0900A349ED /* Root */ = {
 			isa = PBXGroup;
 			children = (
+				56D6FF482A8215BE002736CB /* RootView.swift */,
+				56D6FF4A2A8215C9002736CB /* RootViewModel.swift */,
 			);
 			path = Root;
+			sourceTree = "<group>";
+		};
+		56D6FF4C2A821E5C002736CB /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				56D6FF4D2A821E6C002736CB /* SettingsView.swift */,
+				56D6FF502A82338E002736CB /* SettingsViewModel.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -375,6 +395,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56D6FF4E2A821E6C002736CB /* SettingsView.swift in Sources */,
 				562C682A2A79326D00621A96 /* LoginViewModel.swift in Sources */,
 				56D588112A80CBB5008BDB5E /* HomeViewModel.swift in Sources */,
 				567A51B62A7BC4CF005A40C1 /* RemoteDataSourceProtocol.swift in Sources */,
@@ -383,10 +404,13 @@
 				567A51BC2A7BCB72005A40C1 /* DigimonCellView.swift in Sources */,
 				562C67F92A79030400621A96 /* ContentView.swift in Sources */,
 				562C67F72A79030400621A96 /* DigiListApp.swift in Sources */,
+				56D6FF4B2A8215C9002736CB /* RootViewModel.swift in Sources */,
 				567A51B42A7BC3EA005A40C1 /* RepositoryProtocol.swift in Sources */,
+				56D6FF492A8215BE002736CB /* RootView.swift in Sources */,
 				56D588142A80CEE4008BDB5E /* HomeView.swift in Sources */,
 				567A51B12A7BC3BB005A40C1 /* RepositoryImpl.swift in Sources */,
 				567A51AF2A7BC291005A40C1 /* Digimon.swift in Sources */,
+				56D6FF512A82338E002736CB /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
