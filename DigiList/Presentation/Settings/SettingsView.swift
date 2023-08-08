@@ -17,7 +17,15 @@ struct SettingsView: View {
     var body: some View {
         
         NavigationStack{
-            Spacer(minLength: 200) //MARK: CAMBIAR!!
+            Spacer(minLength: 200)
+                .toolbar{
+                    Button {
+                        rootViewModel.onLogOut()
+                    }label: {
+                        Image(systemName: "rectangle.portrait.and.arrow.right")
+                        Text("LogOut")}
+                }
+            //MARK: CAMBIAR!!
             Section(header: Text("Alternate the Icon App")) {
                 ScrollView(showsIndicators: false){
                     HStack(spacing: 12) {

@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView: View {
     
     @ObservedObject var homeViewModel: HomeViewModel
+    @State private var isAnimatingImage: Bool = false
     
     init(homeViewModel: HomeViewModel) {
         self.homeViewModel = homeViewModel
@@ -17,12 +18,41 @@ struct HomeView: View {
     
     var body: some View {
         NavigationStack{
-            List{
-                ForEach(homeViewModel.digimons) {digimon in
-                    DigimonCellView(digimon: digimon)
+            ZStack{
+                List{
+                    ForEach(homeViewModel.digimons) {digimon in
+                        NavigationLink {
+                            VStack{
+                                AsyncImage(url: URL(string: digimon.img),
+                                           content: { image in
+                                    image.resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                },
+                                           placeholder: {
+                                    ProgressView()
+                                })
+                                HStack{
+                                    Text("Level 💪🏻 ")
+                                        .font(.system(size: 30))
+                                    Image(systemName: "arrow.right")
+                                        .resizable()
+                                        .frame(width: 20, height: 20)
+                                    Text(digimon.level)
+                                        .font(.system(size: 30))
+                                        .foregroundStyle(LinearGradient(
+                                            colors: [.blue, .yellow, .green],
+                                            startPoint: .bottomLeading,
+                                            endPoint: .topTrailing))
+                                }
+                            }
+                            .navigationTitle(digimon.name)
+                        }label: {
+                            DigimonCellView(digimon: digimon)
+                        }
+                    }
                 }
+                .navigationTitle("Digimon's 👾")
             }
-            .navigationTitle("Digimon's")
         }
     }
     

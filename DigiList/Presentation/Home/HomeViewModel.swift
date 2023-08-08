@@ -21,7 +21,7 @@ final class HomeViewModel: ObservableObject {
             Task(priority: .medium){
                 guard let digimonsFromApi = try? await repository.getDigimons() else {
                     self.digimons = []
-                    print("No se ha podido obtener los digimons del repositorio")
+                    print("Couldn´t fetch digimon from Api ")
                     return
                 }
                 
