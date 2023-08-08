@@ -10,7 +10,15 @@ import SwiftUI
 struct HomeView: View {
     
     @ObservedObject var homeViewModel: HomeViewModel
-    @State private var isAnimatingImage: Bool = false
+    @State private var searchedText: String = ""
+    
+    var searchedDigimons: [Digimon] {
+        if searchedText.isEmpty {
+            return homeViewModel.digimons
+        } else {
+            return homeViewModel.digimons.filter {$0.name.contains(searchedText)}
+        }
+    }
     
     init(homeViewModel: HomeViewModel) {
         self.homeViewModel = homeViewModel
@@ -20,7 +28,7 @@ struct HomeView: View {
         NavigationStack{
             ZStack{
                 List{
-                    ForEach(homeViewModel.digimons) {digimon in
+                    ForEach(searchedDigimons) {digimon in
                         NavigationLink {
                             VStack{
                                 AsyncImage(url: URL(string: digimon.img),
@@ -51,6 +59,7 @@ struct HomeView: View {
                         }
                     }
                 }
+                .searchable(text: $searchedText)
                 .navigationTitle("Digimon's 👾")
             }
         }
