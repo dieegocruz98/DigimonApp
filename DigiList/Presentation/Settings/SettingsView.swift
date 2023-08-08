@@ -13,12 +13,13 @@ struct SettingsView: View {
     @EnvironmentObject var settingsViewModel: SettingsViewModel
     
     var body: some View {
+        
         NavigationStack{
             Text("")
             .navigationTitle("Settings")
             .toolbar{
                 Button {
-                    settingsViewModel.logOut()
+                    rootViewModel.onLogOut()
                 }label: {
                     Image(systemName: "rectangle.portrait.and.arrow.right")
                     Text("LogOut")}

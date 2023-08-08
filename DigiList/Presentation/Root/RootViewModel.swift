@@ -35,8 +35,12 @@ final class RootViewModel: ObservableObject {
         
     }
     func onLogOut() {
-        print("hola")
-        status = .none
+        
+        status = .loading
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [self] in
+            status = .none
+        }
     }
     
 }
