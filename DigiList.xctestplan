@@ -1,0 +1,37 @@
+{
+  "configurations" : [
+    {
+      "id" : "9B579869-CD0D-4B7F-8396-6D8B3C5F483A",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:DigiList.xcodeproj",
+      "identifier" : "562C67F22A79030400621A96",
+      "name" : "DigiList"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:DigiList.xcodeproj",
+        "identifier" : "562C68022A79030500621A96",
+        "name" : "DigiListTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:DigiList.xcodeproj",
+        "identifier" : "562C680C2A79030500621A96",
+        "name" : "DigiListUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

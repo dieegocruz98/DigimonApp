@@ -10,7 +10,6 @@ import SwiftUI
 struct SettingsView: View {
     //MARK: PROPERTIES
     @EnvironmentObject var rootViewModel: RootViewModel
-    @EnvironmentObject var settingsViewModel: SettingsViewModel
     private let alternateAppIcons: [String] = [
     "AppIcon-blue","AppIcon-red","AppIcon-green","AppIcon-purple",]
     
@@ -63,6 +62,5 @@ struct SettingsView: View {
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
         SettingsView()
-            .environmentObject(SettingsViewModel(rootViewModel: RootViewModel(repository: RepositoryImpl(remoteDataSource: RemoteDataSource()))))
     }
 }

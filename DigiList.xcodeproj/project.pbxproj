@@ -15,8 +15,8 @@
 		562C68122A79030500621A96 /* DigiListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562C68112A79030500621A96 /* DigiListUITests.swift */; };
 		562C68142A79030500621A96 /* DigiListUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562C68132A79030500621A96 /* DigiListUITestsLaunchTests.swift */; };
 		562C68252A79039100621A96 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562C68242A79039100621A96 /* LoginView.swift */; };
-		562C68282A7927A500621A96 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 562C68272A7927A500621A96 /* Lottie */; };
 		562C682A2A79326D00621A96 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562C68292A79326D00621A96 /* LoginViewModel.swift */; };
+		565633C52A8370F2004DB8EC /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565633C42A8370F2004DB8EC /* LoginViewModelTests.swift */; };
 		567A51AA2A7BC1BB005A40C1 /* RemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567A51A92A7BC1BB005A40C1 /* RemoteDataSource.swift */; };
 		567A51AF2A7BC291005A40C1 /* Digimon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567A51AE2A7BC291005A40C1 /* Digimon.swift */; };
 		567A51B12A7BC3BB005A40C1 /* RepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567A51B02A7BC3BB005A40C1 /* RepositoryImpl.swift */; };
@@ -28,7 +28,6 @@
 		56D6FF492A8215BE002736CB /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D6FF482A8215BE002736CB /* RootView.swift */; };
 		56D6FF4B2A8215C9002736CB /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D6FF4A2A8215C9002736CB /* RootViewModel.swift */; };
 		56D6FF4E2A821E6C002736CB /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D6FF4D2A821E6C002736CB /* SettingsView.swift */; };
-		56D6FF512A82338E002736CB /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D6FF502A82338E002736CB /* SettingsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +60,8 @@
 		562C68132A79030500621A96 /* DigiListUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigiListUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		562C68242A79039100621A96 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		562C68292A79326D00621A96 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		565633BF2A836951004DB8EC /* DigiList.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = DigiList.xctestplan; sourceTree = "<group>"; };
+		565633C42A8370F2004DB8EC /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
 		567A51A92A7BC1BB005A40C1 /* RemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSource.swift; sourceTree = "<group>"; };
 		567A51AE2A7BC291005A40C1 /* Digimon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Digimon.swift; sourceTree = "<group>"; };
 		567A51B02A7BC3BB005A40C1 /* RepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryImpl.swift; sourceTree = "<group>"; };
@@ -72,7 +73,6 @@
 		56D6FF482A8215BE002736CB /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		56D6FF4A2A8215C9002736CB /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
 		56D6FF4D2A821E6C002736CB /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		56D6FF502A82338E002736CB /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +80,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				562C68282A7927A500621A96 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +103,7 @@
 		562C67EA2A79030400621A96 = {
 			isa = PBXGroup;
 			children = (
+				565633BF2A836951004DB8EC /* DigiList.xctestplan */,
 				562C67F52A79030400621A96 /* DigiList */,
 				562C68062A79030500621A96 /* DigiListTests */,
 				562C68102A79030500621A96 /* DigiListUITests */,
@@ -146,6 +146,8 @@
 		562C68062A79030500621A96 /* DigiListTests */ = {
 			isa = PBXGroup;
 			children = (
+				565633C32A8370DA004DB8EC /* Login */,
+				565633C02A836F00004DB8EC /* Suts */,
 				562C68072A79030500621A96 /* DigiListTests.swift */,
 			);
 			path = DigiListTests;
@@ -176,6 +178,21 @@
 			children = (
 				562C68242A79039100621A96 /* LoginView.swift */,
 				562C68292A79326D00621A96 /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		565633C02A836F00004DB8EC /* Suts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Suts;
+			sourceTree = "<group>";
+		};
+		565633C32A8370DA004DB8EC /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				565633C42A8370F2004DB8EC /* LoginViewModelTests.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -254,7 +271,6 @@
 			isa = PBXGroup;
 			children = (
 				56D6FF4D2A821E6C002736CB /* SettingsView.swift */,
-				56D6FF502A82338E002736CB /* SettingsViewModel.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -276,7 +292,6 @@
 			);
 			name = DigiList;
 			packageProductDependencies = (
-				562C68272A7927A500621A96 /* Lottie */,
 			);
 			productName = DigiList;
 			productReference = 562C67F32A79030400621A96 /* DigiList.app */;
@@ -351,7 +366,6 @@
 			);
 			mainGroup = 562C67EA2A79030400621A96;
 			packageReferences = (
-				562C68262A7927A500621A96 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = 562C67F42A79030400621A96 /* Products */;
 			projectDirPath = "";
@@ -410,7 +424,6 @@
 				56D588142A80CEE4008BDB5E /* HomeView.swift in Sources */,
 				567A51B12A7BC3BB005A40C1 /* RepositoryImpl.swift in Sources */,
 				567A51AF2A7BC291005A40C1 /* Digimon.swift in Sources */,
-				56D6FF512A82338E002736CB /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +431,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				565633C52A8370F2004DB8EC /* LoginViewModelTests.swift in Sources */,
 				562C68082A79030500621A96 /* DigiListTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -737,25 +751,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		562C68262A7927A500621A96 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		562C68272A7927A500621A96 /* Lottie */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 562C68262A7927A500621A96 /* XCRemoteSwiftPackageReference "lottie-ios" */;
-			productName = Lottie;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 562C67EB2A79030400621A96 /* Project object */;
 }

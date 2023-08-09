@@ -29,7 +29,7 @@ struct RootView: View {
                     .tabItem {
                         Label("Digimon List", systemImage: "list.dash")
                     }
-                SettingsView().environmentObject(SettingsViewModel(rootViewModel: RootViewModel(repository: RepositoryImpl(remoteDataSource: RemoteDataSource()))))
+                SettingsView()
                     .tabItem {
                         Label("Settings", systemImage: "gear")
                     }
