@@ -18,6 +18,8 @@
 		562C682A2A79326D00621A96 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562C68292A79326D00621A96 /* LoginViewModel.swift */; };
 		565633C52A8370F2004DB8EC /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565633C42A8370F2004DB8EC /* LoginViewModelTests.swift */; };
 		565633C82A838A05004DB8EC /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565633C72A838A05004DB8EC /* SplashView.swift */; };
+		565633CB2A838E64004DB8EC /* RootViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565633CA2A838E64004DB8EC /* RootViewModelTests.swift */; };
+		565633CE2A83924B004DB8EC /* StatusMocked.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565633CD2A83924B004DB8EC /* StatusMocked.swift */; };
 		567A51AA2A7BC1BB005A40C1 /* RemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567A51A92A7BC1BB005A40C1 /* RemoteDataSource.swift */; };
 		567A51AF2A7BC291005A40C1 /* Digimon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567A51AE2A7BC291005A40C1 /* Digimon.swift */; };
 		567A51B12A7BC3BB005A40C1 /* RepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567A51B02A7BC3BB005A40C1 /* RepositoryImpl.swift */; };
@@ -64,6 +66,8 @@
 		565633BF2A836951004DB8EC /* DigiList.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = DigiList.xctestplan; sourceTree = "<group>"; };
 		565633C42A8370F2004DB8EC /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
 		565633C72A838A05004DB8EC /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		565633CA2A838E64004DB8EC /* RootViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModelTests.swift; sourceTree = "<group>"; };
+		565633CD2A83924B004DB8EC /* StatusMocked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusMocked.swift; sourceTree = "<group>"; };
 		567A51A92A7BC1BB005A40C1 /* RemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSource.swift; sourceTree = "<group>"; };
 		567A51AE2A7BC291005A40C1 /* Digimon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Digimon.swift; sourceTree = "<group>"; };
 		567A51B02A7BC3BB005A40C1 /* RepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryImpl.swift; sourceTree = "<group>"; };
@@ -148,8 +152,9 @@
 		562C68062A79030500621A96 /* DigiListTests */ = {
 			isa = PBXGroup;
 			children = (
+				565633CC2A83923A004DB8EC /* Mocks */,
+				565633C92A838E47004DB8EC /* Root */,
 				565633C32A8370DA004DB8EC /* Login */,
-				565633C02A836F00004DB8EC /* Suts */,
 				562C68072A79030500621A96 /* DigiListTests.swift */,
 			);
 			path = DigiListTests;
@@ -185,13 +190,6 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
-		565633C02A836F00004DB8EC /* Suts */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Suts;
-			sourceTree = "<group>";
-		};
 		565633C32A8370DA004DB8EC /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +204,22 @@
 				565633C72A838A05004DB8EC /* SplashView.swift */,
 			);
 			path = Splash;
+			sourceTree = "<group>";
+		};
+		565633C92A838E47004DB8EC /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				565633CA2A838E64004DB8EC /* RootViewModelTests.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		565633CC2A83923A004DB8EC /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				565633CD2A83924B004DB8EC /* StatusMocked.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		567A51A72A7BC188005A40C1 /* Data */ = {
@@ -443,8 +457,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				565633CE2A83924B004DB8EC /* StatusMocked.swift in Sources */,
 				565633C52A8370F2004DB8EC /* LoginViewModelTests.swift in Sources */,
 				562C68082A79030500621A96 /* DigiListTests.swift in Sources */,
+				565633CB2A838E64004DB8EC /* RootViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

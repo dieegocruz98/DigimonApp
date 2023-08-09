@@ -7,16 +7,38 @@
 
 import SwiftUI
 
+enum DigimonLevels: String, CaseIterable, Identifiable {
+    case all = "All"
+    case fresh = "Fresh"
+    case training = "In Training"
+    case rookie = "Rookie"
+    case champion = "Champion"
+    case ultimate = "Ultimate"
+    case mega = "Mega"
+    
+    var id: DigimonLevels {self}
+}
+
 struct HomeView: View {
     
     @ObservedObject var homeViewModel: HomeViewModel
     @State private var searchedText: String = ""
+    @State private var selectedLevel: DigimonLevels = .all
+    
+    var levelSelectedDigimon: [Digimon] {
+        switch (selectedLevel){
+        case .all:
+            return homeViewModel.digimons
+        default:
+            return homeViewModel.digimons.filter {$0.level.contains(selectedLevel.rawValue)}
+        }
+    }
     
     var searchedDigimons: [Digimon] {
         if searchedText.isEmpty {
-            return homeViewModel.digimons
+            return levelSelectedDigimon
         } else {
-            return homeViewModel.digimons.filter {$0.name.contains(searchedText)}
+            return levelSelectedDigimon.filter {$0.name.contains(searchedText)}
         }
     }
     
@@ -60,6 +82,21 @@ struct HomeView: View {
                     }
                 }
                 .searchable(text: $searchedText)
+                .toolbar {
+                    ToolbarItem {
+                        HStack(spacing: 0) {
+                            Picker("Digimon level", selection: $selectedLevel){
+                                ForEach(DigimonLevels.allCases) { category in
+                                    Text(category.rawValue).tag(category)
+                                }
+                            }
+                            
+                            Image(systemName: "line.horizontal.3.decrease.circle")
+                                .foregroundColor(.blue)
+                                .symbolVariant((selectedLevel != DigimonLevels.all) ? .fill : .none)
+                        }
+                    }
+                }
                 .navigationTitle("Digimon's 👾")
             }
         }
