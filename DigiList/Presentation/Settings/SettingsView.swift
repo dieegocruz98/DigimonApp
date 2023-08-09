@@ -55,6 +55,9 @@ struct SettingsView: View {
                     .foregroundColor(.secondary)
             }
             .navigationTitle("Settings")
+            Text("Made with ❤️ by Diego Cruz")
+                .padding(10)
+                .foregroundColor(.secondary)
         }
     }
 }

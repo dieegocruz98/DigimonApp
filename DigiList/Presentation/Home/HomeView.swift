@@ -80,7 +80,7 @@ struct HomeView: View {
                             DigimonCellView(digimon: digimon)
                         }
                     }
-                }
+                } 
                 .searchable(text: $searchedText)
                 .toolbar {
                     ToolbarItem {
