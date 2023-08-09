@@ -17,6 +17,9 @@ struct RootView: View {
     var body: some View {
         switch (rootViewModel.status) {
             
+        case Status.splash:
+            SplashView()
+            
         case Status.none:
             LoginView().environmentObject(LoginViewModel())
             

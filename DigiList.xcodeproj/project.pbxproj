@@ -17,6 +17,7 @@
 		562C68252A79039100621A96 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562C68242A79039100621A96 /* LoginView.swift */; };
 		562C682A2A79326D00621A96 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562C68292A79326D00621A96 /* LoginViewModel.swift */; };
 		565633C52A8370F2004DB8EC /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565633C42A8370F2004DB8EC /* LoginViewModelTests.swift */; };
+		565633C82A838A05004DB8EC /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565633C72A838A05004DB8EC /* SplashView.swift */; };
 		567A51AA2A7BC1BB005A40C1 /* RemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567A51A92A7BC1BB005A40C1 /* RemoteDataSource.swift */; };
 		567A51AF2A7BC291005A40C1 /* Digimon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567A51AE2A7BC291005A40C1 /* Digimon.swift */; };
 		567A51B12A7BC3BB005A40C1 /* RepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567A51B02A7BC3BB005A40C1 /* RepositoryImpl.swift */; };
@@ -62,6 +63,7 @@
 		562C68292A79326D00621A96 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		565633BF2A836951004DB8EC /* DigiList.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = DigiList.xctestplan; sourceTree = "<group>"; };
 		565633C42A8370F2004DB8EC /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
+		565633C72A838A05004DB8EC /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		567A51A92A7BC1BB005A40C1 /* RemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSource.swift; sourceTree = "<group>"; };
 		567A51AE2A7BC291005A40C1 /* Digimon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Digimon.swift; sourceTree = "<group>"; };
 		567A51B02A7BC3BB005A40C1 /* RepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryImpl.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 		562C68202A79034800621A96 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				565633C62A8389F1004DB8EC /* Splash */,
 				56D6FF4C2A821E5C002736CB /* Settings */,
 				567A51B72A7BCB2C005A40C1 /* Home */,
 				56C05BEF2A7A6A0900A349ED /* Root */,
@@ -195,6 +198,14 @@
 				565633C42A8370F2004DB8EC /* LoginViewModelTests.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		565633C62A8389F1004DB8EC /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				565633C72A838A05004DB8EC /* SplashView.swift */,
+			);
+			path = Splash;
 			sourceTree = "<group>";
 		};
 		567A51A72A7BC188005A40C1 /* Data */ = {
@@ -410,6 +421,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56D6FF4E2A821E6C002736CB /* SettingsView.swift in Sources */,
+				565633C82A838A05004DB8EC /* SplashView.swift in Sources */,
 				562C682A2A79326D00621A96 /* LoginViewModel.swift in Sources */,
 				56D588112A80CBB5008BDB5E /* HomeViewModel.swift in Sources */,
 				567A51B62A7BC4CF005A40C1 /* RemoteDataSourceProtocol.swift in Sources */,
