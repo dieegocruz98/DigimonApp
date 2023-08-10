@@ -80,7 +80,10 @@ struct HomeView: View {
                             DigimonCellView(digimon: digimon)
                         }
                     }
-                } 
+                }
+                .refreshable {
+                    selectedLevel = .all
+                }
                 .searchable(text: $searchedText)
                 .toolbar {
                     ToolbarItem {
