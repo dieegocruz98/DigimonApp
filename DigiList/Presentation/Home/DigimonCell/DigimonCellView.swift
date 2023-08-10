@@ -28,7 +28,7 @@ struct DigimonCellView: View {
                            },
                            placeholder: {
                                ProgressView()
-                           })
+                }).accessibilityLabel(Text("\(digimon.name) image"))
 
                 
                 // Nombre y descripción alineados al principio

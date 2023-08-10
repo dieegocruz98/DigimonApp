@@ -78,6 +78,8 @@ struct HomeView: View {
                             .navigationTitle(digimon.name)
                         }label: {
                             DigimonCellView(digimon: digimon)
+                                .accessibility(label: Text("This Digimon is: \(digimon.name)"))
+                                .accessibilityHint(Text("Press to enter to \(digimon.name)"))
                         }
                     }
                 }
