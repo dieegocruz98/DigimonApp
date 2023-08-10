@@ -18,13 +18,8 @@ enum Status {
 final class RootViewModel: ObservableObject {
     
     // MARK: - Properties
-    let repository: RepositoryProtocol
     @Published var status = Status.splash
-    
-    
-    init(repository: RepositoryProtocol) {
-        self.repository = repository
-    }
+    var completion: (() -> Void)?
     
     func onLogin() {
         
@@ -32,6 +27,7 @@ final class RootViewModel: ObservableObject {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [self] in
             status = .loaded
+            completion?()
         }
         
     }
@@ -41,6 +37,7 @@ final class RootViewModel: ObservableObject {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [self] in
             status = .none
+            completion?()
         }
     }
     

@@ -14,12 +14,17 @@ final class HomeViewModel: ObservableObject {
     private var id = 0
     @Published var digimons: [Digimon] = []
     private var digimonsWithID: [Digimon] = []
+    var onGetDigimonClosure: (() -> Void)?
     
     init(repository: RepositoryProtocol) {
         self.repository = repository
+        getDigimons()
+    }
+    
+    func getDigimons() {
         DispatchQueue.main.async {
             Task(priority: .medium){
-                guard let digimonsFromApi = try? await repository.getDigimons() else {
+                guard let digimonsFromApi = try? await self.repository.getDigimons() else {
                     self.digimons = []
                     print("Couldn´t fetch digimon from Api ")
                     return
@@ -30,6 +35,7 @@ final class HomeViewModel: ObservableObject {
                     self.id += 1
                 }
                 self.digimons = self.digimonsWithID
+                self.onGetDigimonClosure?()
             }
         }
     }

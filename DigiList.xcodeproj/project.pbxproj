@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		562235692A84B96F005559AD /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562235682A84B96F005559AD /* HomeViewModelTests.swift */; };
+		5622356B2A84BA93005559AD /* RepositoryImplMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5622356A2A84BA93005559AD /* RepositoryImplMock.swift */; };
 		562C67F72A79030400621A96 /* DigiListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562C67F62A79030400621A96 /* DigiListApp.swift */; };
 		562C67F92A79030400621A96 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562C67F82A79030400621A96 /* ContentView.swift */; };
 		562C67FB2A79030400621A96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 562C67FA2A79030400621A96 /* Assets.xcassets */; };
@@ -51,6 +53,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		562235682A84B96F005559AD /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
+		5622356A2A84BA93005559AD /* RepositoryImplMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryImplMock.swift; sourceTree = "<group>"; };
 		562C67F32A79030400621A96 /* DigiList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigiList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		562C67F62A79030400621A96 /* DigiListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigiListApp.swift; sourceTree = "<group>"; };
 		562C67F82A79030400621A96 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -106,6 +110,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		562235672A84B951005559AD /* HomeViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				562235682A84B96F005559AD /* HomeViewModelTests.swift */,
+			);
+			path = HomeViewModel;
+			sourceTree = "<group>";
+		};
 		562C67EA2A79030400621A96 = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +164,7 @@
 		562C68062A79030500621A96 /* DigiListTests */ = {
 			isa = PBXGroup;
 			children = (
+				562235672A84B951005559AD /* HomeViewModel */,
 				565633CC2A83923A004DB8EC /* Mocks */,
 				565633C92A838E47004DB8EC /* Root */,
 				565633C32A8370DA004DB8EC /* Login */,
@@ -218,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				565633CD2A83924B004DB8EC /* StatusMocked.swift */,
+				5622356A2A84BA93005559AD /* RepositoryImplMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -457,6 +471,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				562235692A84B96F005559AD /* HomeViewModelTests.swift in Sources */,
+				5622356B2A84BA93005559AD /* RepositoryImplMock.swift in Sources */,
 				565633CE2A83924B004DB8EC /* StatusMocked.swift in Sources */,
 				565633C52A8370F2004DB8EC /* LoginViewModelTests.swift in Sources */,
 				562C68082A79030500621A96 /* DigiListTests.swift in Sources */,

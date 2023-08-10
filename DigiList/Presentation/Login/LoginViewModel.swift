@@ -15,11 +15,11 @@ final class LoginViewModel: ObservableObject {
     
     func login(user: String?, password: String?, completion: (Bool) -> ()) {
         
-        guard let user = user else {
+        guard let user else {
           completion(true)
            return
         }
-        guard let password = password else {
+        guard let password else {
           completion(true)
            return
         }

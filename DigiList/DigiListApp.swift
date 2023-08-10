@@ -16,7 +16,7 @@ struct DigiListApp: App {
             //LoginView()
             //.environmentObject(LoginViewModel())
             RootView()
-                .environmentObject(RootViewModel(repository: RepositoryImpl(remoteDataSource: RemoteDataSource())))
+                .environmentObject(RootViewModel())
         }
     }
 }

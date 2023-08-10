@@ -15,7 +15,7 @@ final class RootViewModelTests: XCTestCase {
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         try super.setUpWithError()
-        sut = RootViewModel(repository: RepositoryImpl(remoteDataSource: RemoteDataSource()))
+        sut = RootViewModel()
     }
 
     override func tearDownWithError() throws {
@@ -26,16 +26,32 @@ final class RootViewModelTests: XCTestCase {
 
     func testRootViewModel_whenLoginStatusChanges_expectStatusEqualsLoaded() throws {
         
-//        var statusTest: DigiList.Status = .splash
-//        let expectation = XCTestExpectation(description: "400 ERROR")
-//        
-//        sut!.onLogin(){ status in
-//            statusTest = status!
-//            expectation.fulfill()
-//        }
-//        wait(for: [expectation], timeout: 2.0)
-//        XCTAssertEqual(statusTest, DigiList.Status.loaded)
-//        
+        let expectation = XCTestExpectation()
+        
+        XCTAssertEqual(sut?.status, .splash)
+        sut?.onLogin()
+        
+        XCTAssertEqual(sut?.status, .loading)
+        sut?.completion = {
+            expectation.fulfill()
+        }
+        
+        wait(for: [expectation], timeout: 1.2)
+        XCTAssertEqual(self.sut?.status, .loaded)
+    }
+    
+    func testRootViewModel_whenLogOutStatusChanges_expectStatusEqualsNone() throws {
+        
+        let expectation = XCTestExpectation()
+        
+        sut?.onLogOut()
+        XCTAssertEqual(sut?.status, .loading)
+        sut?.completion = {
+            expectation.fulfill()
+        }
+        
+        wait(for: [expectation], timeout: 0.7)
+        XCTAssertEqual(sut?.status, DigiList.Status.none)
     }
 
     func testPerformanceExample() throws {
