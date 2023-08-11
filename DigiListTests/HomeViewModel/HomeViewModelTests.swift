@@ -35,7 +35,7 @@ final class HomeViewModelTests: XCTestCase {
         try super.tearDownWithError()
     }
 
-    func testGetDigimonsAsSussess() {
+    func testHomeViewModel_GetDigimons_expectGetArrayDigimons() {
         let expectation = XCTestExpectation()
         let expectedResult = [Digimon(id: 0, name: "Agumon", img: "", level: "Rookie")]
         repositoryMock?.result = expectedResult
@@ -47,7 +47,7 @@ final class HomeViewModelTests: XCTestCase {
         XCTAssertEqual(sut?.digimons, expectedResult)
     }
 
-    func testGetDigimonsAsFailure() {
+    func testHomeViewModel_NoDigimons_expectGetEmptyArrayDigimons() {
         let expectation = XCTestExpectation()
         let expectedResult: [Digimon] = []
         repositoryMock?.result = expectedResult
